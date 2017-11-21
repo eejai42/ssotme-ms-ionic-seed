@@ -1,0 +1,13 @@
+
+{
+  "Ontology": {
+    "Name": "Project Name",
+    "OntologyGroups": {
+      "OntologyGroup": {
+        "Name": "dbo",
+        "ObjectDefs": ""
+      }
+    }
+  }
+}
+                    
