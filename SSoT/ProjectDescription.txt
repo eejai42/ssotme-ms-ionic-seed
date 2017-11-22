@@ -1,6 +1,0 @@
-This app will deal with Hours that need to be reported by all students
-who work at the space.  One TimeSheet per student is due the following 
-wednesday of each week. 
-
-Each timesheet will include a report of the number of Hours-Worked per 
-day within the week.
