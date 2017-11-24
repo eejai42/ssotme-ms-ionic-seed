@@ -324,7 +324,7 @@
         "Description": "Turn a nested App States Xml file into helpful app state documentation",
         "CreatedOn": "2017-11-24T20:37:59.973",
         "IsActive": true,
-        "CurrentRoutingKey": "",
+        "CurrentRoutingKey": "amq.gen-wNK352n_II5xCiCRLdJ2Hg",
         "LowerName": "appstatesxmltoappstatesdocs",
         "UpperName": "APPSTATESXMLTOAPPSTATESDOCS",
         "LowerHyphenName": "app-states-xml-to-app-states-docs",
@@ -393,8 +393,8 @@
       "CLIHandler": null,
       "ProjectTranspilerId": "f21397b1-a756-4ce5-8568-b0d6a4bab595",
       "Name": "XmlXsltTransform",
-      "RelativePath": "/ionic2-ts-sidemenu1/src/pages",
-      "CommandLine": "xml-xslt-transform -i ..\\..\\..\\SSoT\\AppStates.xml -i CreateIonicPagesFromAppStates.xslt"
+      "RelativePath": "/ionic2-ts-sidemenu1/src",
+      "CommandLine": "xml-xslt-transform -i ..\\..\\SSoT\\AppStates.xml -i CreateIonicPagesFromAppStates.xslt"
     }
   ]
 }
