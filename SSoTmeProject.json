@@ -274,6 +274,127 @@
       "Name": "OdxmlToCSharpPOCOs",
       "RelativePath": "/CoreLibrary/DataClasses",
       "CommandLine": "odxml42/odxml-to-csharp-pocos -i ..\\..\\ODXML\\DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "988b0e35-bbdb-4a41-8d41-07a4a7871236",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "AppStatesCsvToAppStatesXml",
+        "DisplayName": "App States Csv To App States Xml",
+        "Description": "Converts an AppStates Csv file into an AppStates Xml file with states nested using ParentState as the key",
+        "CreatedOn": "2017-11-24T20:07:18.92",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen--EYG04_AttiEuXR17ieU4Q",
+        "LowerName": "appstatescsvtoappstatesxml",
+        "UpperName": "APPSTATESCSVTOAPPSTATESXML",
+        "LowerHyphenName": "app-states-csv-to-app-states-xml",
+        "ReadMeMD": "Converts states into a nested xml structure which can consistently used by other tools.",
+        "InputDescriptionMD": "These columns are supported:\r\n",
+        "OutputDescriptionMD": "This will create a renames csv file if one was not provided - and return an AppStates.xml file which can be shared by multiple app clients.",
+        "ExampleMD": "ssotme -install app-states-csv-to-app-states-xml -i AppStates.csv",
+        "InputFileTypeId": "2b02094e-3b80-4a07-8db2-0c2f38d44328",
+        "OutputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "82b54683-6eaa-42ce-a396-7cbeccc33636",
+            "TranspilerId": "988b0e35-bbdb-4a41-8d41-07a4a7871236",
+            "Name": "v1",
+            "CreatedOn": "2017-11-24T20:07:20.203",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": null,
+      "ProjectTranspilerId": "dc5cb749-1e21-45d3-8fe7-855742163cad",
+      "Name": "AppStatesCsvToAppStatesXml",
+      "RelativePath": "/SSoT",
+      "CommandLine": "app-states-csv-to-app-states-xml -i .\\AppStates.csv"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "2b909e1b-4a72-4594-9628-32484d710f52",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "AppStatesXmlToAppStatesDocs",
+        "DisplayName": "App States Xml To App States Docs",
+        "Description": "Turn a nested App States Xml file into helpful app state documentation",
+        "CreatedOn": "2017-11-24T20:37:59.973",
+        "IsActive": true,
+        "CurrentRoutingKey": "",
+        "LowerName": "appstatesxmltoappstatesdocs",
+        "UpperName": "APPSTATESXMLTOAPPSTATESDOCS",
+        "LowerHyphenName": "app-states-xml-to-app-states-docs",
+        "ReadMeMD": "This documentation describes the application states in a more helpful human format.",
+        "ExampleMD": "ssotme -install app-states-xml-to-app-states-docs -i AppStates.xml",
+        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "575f6964-a2fa-4d03-8183-0ef7eb0bca2f",
+            "TranspilerId": "2b909e1b-4a72-4594-9628-32484d710f52",
+            "Name": "v1",
+            "CreatedOn": "2017-11-24T20:38:01.477",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": null,
+      "ProjectTranspilerId": "9733804e-96c9-49cf-a362-3f1ad57a1d70",
+      "Name": "AppStatesXmlToAppStatesDocs",
+      "RelativePath": "/docs/appStates",
+      "CommandLine": "app-states-xml-to-app-states-docs -i ..\\..\\SSoT\\AppStates.xml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "XmlXsltTransform",
+        "DisplayName": "Xml Xslt Transform",
+        "Description": "Given an Xml and Xslt file, will process and \"split\" a resulting fileset.",
+        "CreatedOn": "2017-08-30T15:45:09.907",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-pwRUdyqwEq8fPN8gkK7ADg",
+        "LowerName": "xmlxslttransform",
+        "UpperName": "XMLXSLTTRANSFORM",
+        "LowerHyphenName": "xml-xslt-transform",
+        "ReadMeMD": "The tool processes the first text file it finds (which is presumed to be in xml format), with the first Xslt file provided, and includes any parameters that are passed to ssotme as well.\r\n\r\nThe output is expected to be a FileSet Xml blob with the results of the transform.",
+        "InputDescriptionMD": "At least 1 input Xml file, An Xslt file to use for the Transform operation and any additional parameters that the Xslt file uses for it's transpiling functionality.  These could be options, values, namespaces, etc.",
+        "OutputDescriptionMD": "A fileset with the result of the Xslt transform, usually including at least 1 or more files.  The example command might produce an HTML Document that describes (in english) the contents of the Xml file.  Essentially a \"report\" about the xml file. ",
+        "ExampleMD": "ssotme -install xml-xslt-transform -i MyData.xml -i CreateDocs.xslt",
+        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "OutputFileTypeId": "952e47eb-3448-4627-8dc4-93dab494c957",
+        "UsageCount": 4146,
+        "Category": "type-conversion",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "7e941388-752b-4b0f-9631-939b790be10f",
+            "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+            "Name": "v1",
+            "CreatedOn": "2017-08-30T15:45:10.653",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": null,
+      "ProjectTranspilerId": "f21397b1-a756-4ce5-8568-b0d6a4bab595",
+      "Name": "XmlXsltTransform",
+      "RelativePath": "/ionic2-ts-sidemenu1/src/pages",
+      "CommandLine": "xml-xslt-transform -i ..\\..\\..\\SSoT\\AppStates.xml -i CreateIonicPagesFromAppStates.xslt"
     }
   ]
 }
