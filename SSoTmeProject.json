@@ -470,7 +470,7 @@
       "ProjectTranspilerId": "fc24e1c5-23bf-437c-bb9c-99ad3250971f",
       "Name": "OdxmlToPostmanJson",
       "RelativePath": "/PostMan",
-      "CommandLine": "odxml42/odxml-to-postman-json -i ..\\ODXML\\DataSchema.odxml -p project-name=IonicTest -p api-uri=http://localhost:64110/api"
+      "CommandLine": "odxml42/odxml-to-postman-json -i ..\\ODXML\\DataSchema.odxm -p api-uri=http://localhost:64110/api"
     },
     {
       "MatchedTranspiler": {
