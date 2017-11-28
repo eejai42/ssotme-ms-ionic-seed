@@ -470,7 +470,7 @@
       "ProjectTranspilerId": "fc24e1c5-23bf-437c-bb9c-99ad3250971f",
       "Name": "OdxmlToPostmanJson",
       "RelativePath": "/PostMan",
-      "CommandLine": "odxml42/odxml-to-postman-json -i ..\\ODXML\\DataSchema.odxm -p api-uri=http://localhost:64110/api"
+      "CommandLine": "odxml42/odxml-to-postman-json -i ..\\ODXML\\DataSchema.odxml -p api-uri=http://localhost:64110/api"
     },
     {
       "MatchedTranspiler": {
@@ -506,8 +506,97 @@
       "CLIHandler": null,
       "ProjectTranspilerId": "29d86f86-3119-4fd7-8893-5514bdc33250",
       "Name": "OdxmlToMVCRESTAPI",
-      "RelativePath": "/WebApplication1/Controllers/api",
+      "RelativePath": "/MVCRestApi/Controllers/api",
       "CommandLine": "odxml42/odxml-to-mvc-rest-api -i ..\\..\\..\\ODXML\\DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": null,
+      "CLIHandler": null,
+      "ProjectTranspilerId": "1ef41254-d656-47f5-bf7d-688fa97fb8b1",
+      "Name": "LocalCommand",
+      "RelativePath": "/MVCRestApi/Controllers/api",
+      "CommandLine": "-checkresults"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "bbeadea3-75c7-449a-9aaa-22e2b29c2ed7",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "SPXmlToDetailedSPXml",
+        "DisplayName": "S P Xml To Detailed S P Xml",
+        "Description": "Converts a SSoTmeProject.xml file into a Detailed SPXml file.",
+        "CreatedOn": "2017-10-14T22:26:12.277",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-jWBa32Jd3OAy32tcP7I0iA",
+        "LowerName": "spxmltodetailedspxml",
+        "UpperName": "SPXMLTODETAILEDSPXML",
+        "LowerHyphenName": "s-p-xml-to-detailed-s-p-xml",
+        "ReadMeMD": "Essentially - this gathers META DATA about the files involved in each of the transpile operations (input & output), and combines it all together into a single file.  Subsequent tools can then create (for example) documentation of this process.  This tool just gathers the information together.\r\n\r\nIt also includes the meta data about all of the files types (as a snapshot at the point in time that this tool is run) authoritatively from SSoT.me.\r\n\r\nThe command ssotme -createDocs automatically installs this tool, plus the tool which converts the DSPxml file into a more helpful Html document.",
+        "InputDescriptionMD": "A SSoTmeProject.json file - which is read locally by the Open Source SSoT.me CLI tools.  ",
+        "OutputDescriptionMD": "Based on this file, and by examining the .zfs files throughout the project, a picture of the build process is rebuilt (without any of the content of the input/output files) - and a single, unified picture of the project is developed - a Detailed SPXml file.",
+        "ExampleMD": "ssotme -createDocs",
+        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "OutputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "UsageCount": 326,
+        "Category": "ssotme",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "28cf2294-48c9-41df-838a-08519b75d3c3",
+            "TranspilerId": "bbeadea3-75c7-449a-9aaa-22e2b29c2ed7",
+            "Name": "v1",
+            "CreatedOn": "2017-10-14T22:26:22.67",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": null,
+      "ProjectTranspilerId": "58dca1ce-dd8f-42d0-b041-6914df54e819",
+      "Name": "SPXmlToDetailedSPXml",
+      "RelativePath": "/DSPXml",
+      "CommandLine": "spxml-to-detailed-spxml -i .\\SSoTmeProject.spxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "06876a87-a56c-4c75-a01f-377e97deed7a",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "DetailedSPXmlToHtmlDocs",
+        "DisplayName": "Detailed S P Xml To Html Docs",
+        "Description": "Detailed S P Xml To Html Docs",
+        "CreatedOn": "2017-10-14T22:05:54.85",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-oEpCrG1TUS34T1e-TSjftA",
+        "LowerName": "detailedspxmltohtmldocs",
+        "UpperName": "DETAILEDSPXMLTOHTMLDOCS",
+        "LowerHyphenName": "detailed-s-p-xml-to-html-docs",
+        "ReadMeMD": "This system tool turns a detailed SPXml file into detailed Html Documentation about how the SSoT.me project is organized. Specifically, how does the tech \"flow\" thorugh the project. ",
+        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
+        "UsageCount": 274,
+        "Category": "ssotme",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "59b27e72-9f6d-4f13-b246-69afadb78106",
+            "TranspilerId": "06876a87-a56c-4c75-a01f-377e97deed7a",
+            "Name": "v1",
+            "CreatedOn": "2017-10-14T22:05:59.07",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": null,
+      "ProjectTranspilerId": "27bd8288-d51f-42ca-b580-c3a71279805c",
+      "Name": "DetailedSPXmlToHtmlDocs",
+      "RelativePath": "/DSPXml",
+      "CommandLine": "detailed-spxml-to-html -i .\\SSoTmeProject.dspxml"
     }
   ]
 }
