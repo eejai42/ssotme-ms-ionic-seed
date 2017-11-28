@@ -26,7 +26,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SSoT", "SSoT\", "{7FDA781F-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{419B1AF3-2AB0-4740-8478-B1230325AA16}"
 	ProjectSection(SolutionItems) = preProject
-		build-ssotme.bat = build-ssotme.bat
 		Docs\SinglePageDocs.html = Docs\SinglePageDocs.html
 	EndProjectSection
 EndProject
@@ -71,24 +70,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SqlServer", "SqlServer\", "
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "59880"
-	EndProjectSection
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_59880"
-		Debug.AspNetCompiler.PhysicalPath = "SqlServer\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59880\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_59880"
-		Release.AspNetCompiler.PhysicalPath = "SqlServer\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59880\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "59880"
 		SlnRelativePath = "SqlServer\"
 	EndProjectSection
 EndProject
@@ -96,9 +77,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{0A541A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ionic", "Ionic", "{223A3EF4-7F7F-47E5-9601-A1DE95684ECE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}"
-EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "ionic2-ts-sidemenu1", "ionic2-ts-sidemenu1\ionic2-ts-sidemenu1.jsproj", "{549CBA80-397B-4F8E-BB0E-5944E9D7E7DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCRestApi", "MVCRestApi\MVCRestApi.csproj", "{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -230,34 +211,6 @@ Global
 		{5546C69F-57F6-4DDD-901F-3F3225577B79}.Release|Windows-x64.Build.0 = Debug|Any CPU
 		{5546C69F-57F6-4DDD-901F-3F3225577B79}.Release|Windows-x86.ActiveCfg = Debug|Any CPU
 		{5546C69F-57F6-4DDD-901F-3F3225577B79}.Release|Windows-x86.Build.0 = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Android.ActiveCfg = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Android.Build.0 = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|iOS.ActiveCfg = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|iOS.Build.0 = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-AnyCPU.Build.0 = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-ARM.ActiveCfg = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-ARM.Build.0 = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-x64.ActiveCfg = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-x64.Build.0 = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-x86.ActiveCfg = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-x86.Build.0 = Debug|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Android.ActiveCfg = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Android.Build.0 = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|iOS.ActiveCfg = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|iOS.Build.0 = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-AnyCPU.ActiveCfg = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-AnyCPU.Build.0 = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-ARM.ActiveCfg = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-ARM.Build.0 = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-x64.ActiveCfg = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-x64.Build.0 = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-x86.ActiveCfg = Release|Any CPU
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-x86.Build.0 = Release|Any CPU
 		{549CBA80-397B-4F8E-BB0E-5944E9D7E7DD}.Debug|Android.ActiveCfg = Debug|Android
 		{549CBA80-397B-4F8E-BB0E-5944E9D7E7DD}.Debug|Android.Build.0 = Debug|Android
 		{549CBA80-397B-4F8E-BB0E-5944E9D7E7DD}.Debug|Android.Deploy.0 = Debug|Android
@@ -296,6 +249,34 @@ Global
 		{549CBA80-397B-4F8E-BB0E-5944E9D7E7DD}.Release|Windows-x86.ActiveCfg = Release|Windows-x86
 		{549CBA80-397B-4F8E-BB0E-5944E9D7E7DD}.Release|Windows-x86.Build.0 = Release|Windows-x86
 		{549CBA80-397B-4F8E-BB0E-5944E9D7E7DD}.Release|Windows-x86.Deploy.0 = Release|Windows-x86
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Android.ActiveCfg = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Android.Build.0 = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|iOS.ActiveCfg = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|iOS.Build.0 = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-AnyCPU.Build.0 = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-ARM.Build.0 = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-x64.ActiveCfg = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-x64.Build.0 = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-x86.ActiveCfg = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Debug|Windows-x86.Build.0 = Debug|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Android.ActiveCfg = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Android.Build.0 = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|iOS.ActiveCfg = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|iOS.Build.0 = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-AnyCPU.ActiveCfg = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-AnyCPU.Build.0 = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-ARM.ActiveCfg = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-ARM.Build.0 = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-x64.ActiveCfg = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-x64.Build.0 = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-x86.ActiveCfg = Release|Any CPU
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0}.Release|Windows-x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -305,8 +286,8 @@ Global
 		{C3C5F7F6-D9D8-4165-911B-0527B69EA7EF} = {0A541AE6-FA3A-464B-8B0B-1AA73CC0C164}
 		{A40F7CDC-1AD8-44A0-BFAC-BC6CF2D9D967} = {419B1AF3-2AB0-4740-8478-B1230325AA16}
 		{5546C69F-57F6-4DDD-901F-3F3225577B79} = {419B1AF3-2AB0-4740-8478-B1230325AA16}
-		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0} = {0A541AE6-FA3A-464B-8B0B-1AA73CC0C164}
 		{549CBA80-397B-4F8E-BB0E-5944E9D7E7DD} = {223A3EF4-7F7F-47E5-9601-A1DE95684ECE}
+		{EFE45374-1DB7-4E92-AC9C-9B047DD5B8D0} = {0A541AE6-FA3A-464B-8B0B-1AA73CC0C164}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3B3E5043-67BA-4195-943E-FD31E9B5D30F}
