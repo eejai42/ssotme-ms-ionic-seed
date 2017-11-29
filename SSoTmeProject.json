@@ -2,7 +2,9 @@
   "SSoTmeProjectId": "109a3ca6-4391-4d84-9edc-68585ce5b4eb",
   "Name": "ssotme-seed",
   "RootPath": "C:\\Development\\ssotme-ms-ionic-seed",
-  "ProjectSettings": [],
+  "ProjectSettings": [
+  
+  ],
   "ProjectTranspilers": [
     {
       "MatchedTranspiler": {
@@ -244,11 +246,11 @@
         "Description": "Odxml To CSharp POCOs",
         "CreatedOn": "2017-09-07T17:35:30.24",
         "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-QiqFF_nTK2i8imwlwH7TYw",
+        "CurrentRoutingKey": "amq.gen-ClFrnG6AMwloJkLnUQ2d3Q",
         "LowerName": "odxmltocsharppocos",
         "UpperName": "ODXMLTOCSHARPPOCOS",
         "LowerHyphenName": "odxml-to-c-sharp-p-o-c-os",
-        "ReadMeMD": "param name=\"include-list-prefix\" select=\"true\"\r\nWill include the fieldname of the referenced object before lists so that if a child object has multiple references to an object, the collections on the parent will be distinguished by the name of the child properties.\r\n\r\nparam name=include-sdm-expand=false\r\nparam name=include-load-methods=true\r\n\r\nparam name=\"include-inheritance\" select=\"true\"\r\nIf a relationship exists on the primary key fo the object, it will be infered to \"descend\" from the refrenced object.\r\n\r\nparam name=\"pluralize-json-references\" select=\"true\"\r\nDetermines if the \"original name\" should be pluraized in the Json serialization header.\r\n\r\nparam name=sdm--namespace = 'using KP.ODXML7.SqlDataManager.{project-name}.SqlDataManagement;'\r\n\r\n\r\nparam name=extensions-namespace = 'CoreLibrary.Extensions'\r\n\r\nparam name=serialize-to-original-names=\"'false\"  \r\nInidicates if the json formatting should use original names",
+        "ReadMeMD": "param name=\"include-list-prefix\" select=\"true\"\r\nWill include the fieldname of the referenced object before lists so that if a child object has multiple references to an object, the collections on the parent will be distinguished by the name of the child properties.\r\n\r\nparam name=include-sdm-expand=false\r\nparam name=include-load-methods=true\r\n\r\nparam name=\"include-inheritance\" select=\"true\"\r\nIf a relationship exists on the primary key fo the object, it will be infered to \"descend\" from the refrenced object.\r\n\r\nparam name=\"pluralize-json-references\" select=\"true\"\r\nDetermines if the \"original name\" should be pluraized in the Json serialization header.\r\n\r\nparam name=sdm--namespace = 'using KP.ODXML7.SqlDataManager.{project-name}.SqlDataManagement;'\r\n\r\n\r\nparam name=extensions-namespace = 'CoreLibrary.Extensions'\r\n\r\nparam name=serialize-to-original-names=\"'false\"  \r\nInidicates if the json formatting should use original names\r\n\r\nparam name=\"csproj-filename\" = ''\r\nparam name=\"output-csproj-filename\" = ''\r\nparam name=\"relative-path\" = ''\r\n",
         "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
         "OutputFileTypeId": "47f5fc9f-0c22-4f73-8d18-0544a7f05d7b",
         "UsageCount": 652,
@@ -270,10 +272,10 @@
         ]
       },
       "CLIHandler": null,
-      "ProjectTranspilerId": "ea08a7ef-e8f3-4ca3-a84f-180955417c1a",
+      "ProjectTranspilerId": "6a143376-da3b-4283-9295-43cb4c0c49f1",
       "Name": "OdxmlToCSharpPOCOs",
       "RelativePath": "/CoreLibrary/DataClasses",
-      "CommandLine": "odxml42/odxml-to-csharp-pocos -i ..\\..\\ODXML\\DataSchema.odxml"
+      "CommandLine": "odxml42/odxml-to-csharp-pocos -i ..\\..\\ODXML\\DataSchema.odxml -i ..\\CoreLibrary.csproj -p output-csproj-filename=../CoreLibrary.csproj -p relative-path=DataClasses\\\\ include-sdm-expand=true"
     },
     {
       "MatchedTranspiler": {
@@ -401,7 +403,7 @@
         "Description": "Odxml To CSharp Sql Data Manager",
         "CreatedOn": "2017-09-27T19:08:25.863",
         "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-uWettrm28lLelWFpHmvbhg",
+        "CurrentRoutingKey": "amq.gen-ClFrnG6AMwloJkLnUQ2d3Q",
         "LowerName": "odxmltocsharpsqldatamanager",
         "UpperName": "ODXMLTOCSHARPSQLDATAMANAGER",
         "LowerHyphenName": "odxml-to-c-sharp-sql-data-manager",
