@@ -1,4 +1,117 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl"
+>
+    <xsl:output method="xml" indent="yes"/>
+    <xsl:include href="../CommonXsltTemplates.xslt"/>
+    <xsl:param name="project-name" select="'SSoTme-MS-Ionic-Seed'" />
+    <xsl:param name="output-filename" select="'output.txt'" />
+
+    <xsl:template match="@* | node()">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="/*">
+        <FileSet>
+            <FileSetFiles>
+                <FileSetFile>
+                    <RelativePath>
+                        <xsl:text>../MVCRestApi/Web.config</xsl:text>
+                    </RelativePath>
+                    <OverwriteMode>Never</OverwriteMode>
+                    <xsl:element name="FileContents" xml:space="preserve">&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;!--
+  For more information on how to configure your ASP.NET application, please visit
+  https://go.microsoft.com/fwlink/?LinkId=301879
+  -->
+&lt;configuration>
+  &lt;appSettings>
+    &lt;add key="webpages:Version" value="3.0.0.0" />
+    &lt;add key="webpages:Enabled" value="false" />
+    &lt;add key="ClientValidationEnabled" value="true" />
+    &lt;add key="UnobtrusiveJavaScriptEnabled" value="true" />
+  &lt;/appSettings>
+    &lt;connectionStrings>
+        &lt;clear />
+        &lt;add name="DefaultConnection" connectionString="Data Source=.;Initial Catalog=<xsl:value-of select="$project-name" />;Integrated Security=sspi" />
+    &lt;/connectionStrings>
+  &lt;system.web>
+    &lt;compilation debug="true" targetFramework="4.6.1" />
+    &lt;httpRuntime targetFramework="4.6.1" />
+    &lt;httpModules>
+      &lt;add name="ApplicationInsightsWebTracking" type="Microsoft.ApplicationInsights.Web.ApplicationInsightsHttpModule, Microsoft.AI.Web" />
+    &lt;/httpModules>
+  &lt;/system.web>
+  &lt;system.webServer>
+    &lt;handlers>
+      &lt;remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      &lt;remove name="OPTIONSVerbHandler" />
+      &lt;remove name="TRACEVerbHandler" />
+      &lt;add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    &lt;/handlers>
+    &lt;validation validateIntegratedModeConfiguration="false" />
+    &lt;modules>
+      &lt;remove name="TelemetryCorrelationHttpModule" />
+      &lt;add name="TelemetryCorrelationHttpModule" type="Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule, Microsoft.AspNet.TelemetryCorrelation" preCondition="integratedMode,managedHandler" />
+      &lt;remove name="ApplicationInsightsWebTracking" />
+      &lt;add name="ApplicationInsightsWebTracking" type="Microsoft.ApplicationInsights.Web.ApplicationInsightsHttpModule, Microsoft.AI.Web" preCondition="managedHandler" />
+    &lt;/modules>
+  &lt;/system.webServer>
+  &lt;runtime>
+    &lt;assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      &lt;dependentAssembly>
+        &lt;assemblyIdentity name="Newtonsoft.Json" culture="neutral" publicKeyToken="30ad4fe6b2a6aeed" />
+        &lt;bindingRedirect oldVersion="0.0.0.0-10.0.0.0" newVersion="10.0.0.0" />
+      &lt;/dependentAssembly>
+      &lt;dependentAssembly>
+        &lt;assemblyIdentity name="System.Web.Optimization" publicKeyToken="31bf3856ad364e35" />
+        &lt;bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="1.1.0.0" />
+      &lt;/dependentAssembly>
+      &lt;dependentAssembly>
+        &lt;assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" />
+        &lt;bindingRedirect oldVersion="0.0.0.0-1.6.5135.21930" newVersion="1.6.5135.21930" />
+      &lt;/dependentAssembly>
+      &lt;dependentAssembly>
+        &lt;assemblyIdentity name="System.Web.Helpers" publicKeyToken="31bf3856ad364e35" />
+        &lt;bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      &lt;/dependentAssembly>
+      &lt;dependentAssembly>
+        &lt;assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35" />
+        &lt;bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      &lt;/dependentAssembly>
+      &lt;dependentAssembly>
+        &lt;assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" />
+        &lt;bindingRedirect oldVersion="1.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+      &lt;/dependentAssembly>
+      &lt;dependentAssembly>
+        &lt;assemblyIdentity name="Antlr3.Runtime" publicKeyToken="eb42632606e9261f" culture="neutral" />
+        &lt;bindingRedirect oldVersion="0.0.0.0-3.5.0.2" newVersion="3.5.0.2" />
+      &lt;/dependentAssembly>
+      &lt;dependentAssembly>
+        &lt;assemblyIdentity name="System.Diagnostics.DiagnosticSource" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
+        &lt;bindingRedirect oldVersion="0.0.0.0-4.0.2.1" newVersion="4.0.2.1" />
+      &lt;/dependentAssembly>
+    &lt;/assemblyBinding>
+  &lt;/runtime>
+  &lt;system.codedom>
+    &lt;compilers>
+      &lt;compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:default /nowarn:1659;1699;1701" />
+      &lt;compiler language="vb;vbs;visualbasic;vbscript" extension=".vb" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:default /nowarn:41008 /define:_MYTYPE=\&quot;Web\&quot; /optionInfer+" />
+    &lt;/compilers>
+  &lt;/system.codedom>
+&lt;/configuration>
+                    </xsl:element>
+                </FileSetFile>
+                <FileSetFile>
+                    <RelativePath>
+                        <xsl:text>../</xsl:text>
+                        <xsl:value-of select="$project-name"/>
+                        <xsl:text>.sln</xsl:text>
+                    </RelativePath>
+                    <OverwriteMode>Never</OverwriteMode>
+                    <xsl:element name="FileContents" xml:space="preserve">
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
@@ -293,3 +406,10 @@ Global
 		SolutionGuid = {3B3E5043-67BA-4195-943E-FD31E9B5D30F}
 	EndGlobalSection
 EndGlobal
+
+</xsl:element>
+                </FileSetFile>
+            </FileSetFiles>
+        </FileSet>
+    </xsl:template>
+</xsl:stylesheet>
